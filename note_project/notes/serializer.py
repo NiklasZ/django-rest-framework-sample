@@ -13,9 +13,7 @@ class NoteSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    # Get user's note ids
-    notes = serializers.PrimaryKeyRelatedField(many=True, queryset=Note.objects.all())
 
     class Meta:
         model = User
-        fields = ['url', 'id', 'username', 'notes']
+        fields = ['id', 'username']

@@ -8,6 +8,8 @@ from notes.models import Note
 from notes.serializer import NoteSerializer, UserSerializer
 
 
+# We're using API Views here. These are less expressive than functional views, but also much shorter.
+
 class NoteList(generics.ListCreateAPIView):
     """
     GET list of notes or POST a new note
