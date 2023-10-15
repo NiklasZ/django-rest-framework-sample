@@ -9,7 +9,7 @@ class NoteSerializer(serializers.ModelSerializer):
         model = Note
         # Use only user id for serialization
         owner = serializers.ReadOnlyField(source='owner.username')
-        fields = ['owner', 'id', 'title', 'body']
+        fields = ['owner', 'id', 'title', 'body', 'created']
 
 
 class UserSerializer(serializers.ModelSerializer):

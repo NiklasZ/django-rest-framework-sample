@@ -9,7 +9,7 @@ This is a simple Django REST API for managing notes. It is based off of Django a
 # Running
 To set-up the database for the first time, use the following from the repository root:
 ```bash
-cd node_project && python manage.py migrate
+cd note_project && python manage.py migrate
 ```
 To run the server use the following from the repository root:
 ```bash
@@ -64,8 +64,8 @@ curl --location 'localhost:8000/notes/' \
 --header 'Content-Type: application/json' \
 --data '{
     "owner": <id>,
-    "body" : "My Shopping List",
-    "text": "BBQ sauce, garlic"
+    "title" : "My Shopping List",
+    "body": "BBQ sauce, garlic"
 }'
 ```
 
